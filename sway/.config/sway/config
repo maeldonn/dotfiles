@@ -4,8 +4,6 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-# seat * hide_cursor when-typing enable
-
 smart_gaps on
 gaps inner 20
 gaps outer 10
@@ -133,55 +131,30 @@ exec swayidle -w \
 # Workspaces:
 #
     # Switch to workspace
-    # bindsym $mod+1 workspace number 1
-    # bindsym $mod+2 workspace number 2
-    # bindsym $mod+3 workspace number 3
-    # bindsym $mod+4 workspace number 4
-    # bindsym $mod+5 workspace number 5
-    # bindsym $mod+6 workspace number 6
-    # bindsym $mod+7 workspace number 7
-    # bindsym $mod+8 workspace number 8
-    # bindsym $mod+9 workspace number 9
-    # bindsym $mod+0 workspace number 10
+    bindsym $mod+ampersand workspace number 1
+    bindsym $mod+eacute workspace number 2
+    bindsym $mod+quotedbl workspace number 3
+    bindsym $mod+apostrophe workspace number 4
+    bindsym $mod+parenleft workspace number 5
+    bindsym $mod+minus workspace number 6
+    bindsym $mod+egrave workspace number 7
+    bindsym $mod+underscore workspace number 8
+    bindsym $mod+ccedilla workspace number 9
+    bindsym $mod+agrave workspace number 10
 
     # Move focused container to workspace
-    # bindsym $mod+Shift+1 move container to workspace number 1
-    # bindsym $mod+Shift+2 move container to workspace number 2
-    # bindsym $mod+Shift+3 move container to workspace number 3
-    # bindsym $mod+Shift+4 move container to workspace number 4
-    # bindsym $mod+Shift+5 move container to workspace number 5
-    # bindsym $mod+Shift+6 move container to workspace number 6
-    # bindsym $mod+Shift+7 move container to workspace number 7
-    # bindsym $mod+Shift+8 move container to workspace number 8
-    # bindsym $mod+Shift+9 move container to workspace number 9
-    # bindsym $mod+Shift+0 move container to workspace number 10
+    bindsym $mod+Shift+ampersand move container to workspace number 1
+    bindsym $mod+Shift+eacute move container to workspace number 2
+    bindsym $mod+Shift+quotedbl move container to workspace number 3
+    bindsym $mod+Shift+apostrophe move container to workspace number 4
+    bindsym $mod+Shift+parenleft move container to workspace number 5
+    bindsym $mod+Shift+minus move container to workspace number 6
+    bindsym $mod+Shift+egrave move container to workspace number 7
+    bindsym $mod+Shift+underscore move container to workspace number 8
+    bindsym $mod+Shift+ccedilla move container to workspace number 9
+    bindsym $mod+Shift+agrave move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-
-
-    bindsym --input-device=$builtin_keyboard $mod+ampersand workspace 1
-    bindsym --input-device=$builtin_keyboard $mod+Shift+k workspace 1
-    bindsym --input-device=$builtin_keyboard $mod+eacute workspace 2
-    bindsym --input-device=$builtin_keyboard $mod+quotedbl workspace 3
-    bindsym --input-device=$builtin_keyboard $mod+apostrophe workspace 4
-    bindsym --input-device=$builtin_keyboard $mod+parenleft workspace 5
-    bindsym --input-device=$builtin_keyboard $mod+minus workspace 6
-    bindsym --input-device=$builtin_keyboard $mod+egrave workspace 7
-    bindsym --input-device=$builtin_keyboard $mod+underscore workspace 8
-    bindsym --input-device=$builtin_keyboard $mod+ccedilla workspace 9
-    bindsym --input-device=$builtin_keyboard $mod+agrave workspace 10
-    bindsym --input-device=$builtin_keyboard $mod+Shift+ampersand move container to workspace number 1
-    bindsym --input-device=$builtin_keyboard $mod+Shift+eacute move container to workspace number 2
-    bindsym --input-device=$builtin_keyboard $mod+Shift+quotedbl move container to workspace number 3
-    bindsym --input-device=$builtin_keyboard $mod+Shift+apostrophe move container to workspace number 4
-    bindsym --input-device=$builtin_keyboard $mod+Shift+parenleft move container to workspace number 5
-    bindsym --input-device=$builtin_keyboard $mod+Shift+minus move container to workspace number 6
-    bindsym --input-device=$builtin_keyboard $mod+Shift+egrave move container to workspace number 7
-    bindsym --input-device=$builtin_keyboard $mod+Shift+underscore move container to workspace number 8
-    bindsym --input-device=$builtin_keyboard $mod+Shift+ccedilla move container to workspace number 9
-    bindsym --input-device=$builtin_keyboard $mod+Shift+agrave move container to workspace number 10
-
-
 
 #
 # Layout stuff:

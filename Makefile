@@ -17,7 +17,7 @@ deploy:
 	@echo 'Deploying dotfiles...'
 	@stow alacritty
 	@stow bin
-	@chmod +x ~/.local/scripts/*.sh
+	@chmod +x ~/.local/scripts/*
 	@stow nvim
 	@stow personal
 	@stow sway
