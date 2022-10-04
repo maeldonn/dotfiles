@@ -1,0 +1,96 @@
+window {
+  font-family: "DejaVu Sans Mono NF";
+  margin: 0px;
+  border: 10px solid #ebdbb2;
+  background-color: #282828;
+}
+
+#input {
+  margin: 5px;
+  border: none;
+  border-radius: 0;
+  color: #ebdbb2;
+  background-color: #282828;
+}
+
+#inner-box {
+  margin: 5px;
+  border: none;
+  border-radius: 0;
+  background-color: #282828;
+}
+
+#outer-box {
+  margin: 5px;
+  border: none;
+  border-radius: 0;
+  background-color: #282828;
+}
+
+#scroll {
+  margin: 0px;
+  border: none;
+  border-radius: 0;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+  border-radius: 0;
+  color: #ebdbb2;
+}
+
+#text:selected {
+  color: #282828;
+}
+
+#entry:selected {
+  background-color: #ebdbb2;
+}
+  margin: 0px;
+  border: 10px solid #ebdbb2;
+  background-color: #282828;
+}
+
+#input {
+  margin: 5px;
+  border: none;
+  border-radius: 0;
+  color: #ebdbb2;
+  background-color: #282828;
+}
+
+#inner-box {
+  margin: 5px;
+  border: none;
+  border-radius: 0;
+  background-color: #282828;
+}
+
+#outer-box {
+  margin: 5px;
+  border: none;
+  border-radius: 0;
+  background-color: #282828;
+}
+
+#scroll {
+  margin: 0px;
+  border: none;
+  border-radius: 0;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+  border-radius: 0;
+  color: #ebdbb2;
+}
+
+#text:selected {
+  color: #282828;
+}
+
+#entry:selected {
+  background-color: #ebdbb2;
+}
