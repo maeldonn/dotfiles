@@ -4,7 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-seat * hide_cursor when-typing enable
+# seat * hide_cursor when-typing enable
 
 smart_gaps on
 gaps inner 20

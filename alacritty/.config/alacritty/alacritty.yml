@@ -28,6 +28,10 @@ window:
   ## Background opacity
   opacity: 0.9
 
+## Mouse
+mouse:
+  hide_when_typing: true
+
 ## Scrolling
 scrolling:
   history: 10000
