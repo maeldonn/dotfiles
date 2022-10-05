@@ -269,9 +269,8 @@ Use user's account to perform these operations
 curl -s "https://get.sdkman.io" | bash
 sdk install java
 sdk install maven
+yay -S jdtls
 ```
-
-Then setup eclipse jdtls language server
 
 **GO**
 
@@ -286,8 +285,14 @@ go install golang.org/x/tools/gopls@latest
 yay -S nvm
 nvm install --lts
 nvm use --lts
-npm i -g typescript typescript-language-server prettier
-npm install -g 
+sudo npm i -g typescript typescript-language-server prettier
+sudo npm install -g 
+```
+
+**LUA**
+
+```bash
+sudo pacman -S lua-language-server
 ```
 
 ### Setup dotfiles
