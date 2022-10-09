@@ -1,31 +1,20 @@
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local Remap = require("mdonnart.keymap")
+local inoremap = Remap.inoremap
+local nnoremap = Remap.nnoremap
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local workspace_dir = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
 local config = {
     cmd = {
-        'java',
-        '-Declipse.application=org.eclipse.jdt.ls.core.id1',
-        '-Dosgi.bundles.defaultStartLevel=4',
-        '-Declipse.product=org.eclipse.jdt.ls.core.product',
-        '-Dlog.protocol=true',
-        '-Dlog.level=ALL',
-        '-Xms1g',
-        '-jar', '/home/maeldonnart/.config/nvim/lsp-server/jdt-language-server-1.9.0-202203031534/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
-        '-configuration', '/home/maeldonnart/.config/nvim/lsp-server/jdt-language-server-1.9.0-202203031534/config_linux',
+        'jdtls',
+        '-configuration ~/.cache/jdtls',
         '-data', vim.fn.expand('~/.cache/jdtls-workspace') .. workspace_dir,
     },
-
     root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew', 'pom.xml'}),
-    capabilities = capabilities,
-
-    -- Language server `initializationOptions`
-    -- You need to extend the `bundles` with paths to jar files
-    -- if you want to use additional eclipse.jdt.ls plugins.
-    --
-    -- See https://github.com/mfussenegger/nvim-jdtls#java-debug-installation
-    --
-    -- If you don't plan on using the debugger or other eclipse.jdt.ls plugins you can remove this
+    capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities),
     init_options = {
         bundles = {}
     },
@@ -33,13 +22,13 @@ local config = {
 
 require('jdtls').start_or_attach(config)
 
-local opts = { noremap=true, silent=true }
-vim.keymap.set("n", "K", '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
-vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-vim.keymap.set("n", "<leader>dj", vim.diagnostic.goto_next, opts)
-vim.keymap.set("n", "<leader>dk", vim.diagnostic.goto_prev, opts)
-vim.keymap.set("n", "gr", vim.lsp.buf.rename, opts)
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-
+nnoremap("K", function() vim.lsp.buf.hover() end)
+nnoremap("gd", function() vim.lsp.buf.definition() end)
+nnoremap("gt", function() vim.lsp.buf.type_definition() end)
+nnoremap("gi", function() vim.lsp.buf.implementation() end)
+nnoremap("gu", function() vim.lsp.buf.references() end)
+nnoremap("[d", function() vim.diagnostic.goto_next() end)
+nnoremap("]d", function() vim.diagnostic.goto_prev() end)
+nnoremap("gr", function() vim.lsp.buf.rename() end)
+inoremap("<C-h>", function() vim.lsp.buf.signature_help() end)
+nnoremap("<leader>ca", function() vim.lsp.buf.code_action() end)

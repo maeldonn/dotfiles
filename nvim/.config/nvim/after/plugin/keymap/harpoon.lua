@@ -1,4 +1,4 @@
-local nnoremap = require("maeldonnart.keymap").nnoremap
+local nnoremap = require("mdonnart.keymap").nnoremap
 
 local silent = { silent = true }
 

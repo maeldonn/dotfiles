@@ -1,10 +1,10 @@
-local Remap = require("maeldonnart.keymap")
+local Remap = require("mdonnart.keymap")
 local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
 
-nnoremap("==", "<cmd>Neoformat<CR>")
+nnoremap("<leader>f", "<cmd>Neoformat<CR>")
 
-vnoremap("==", function()
+vnoremap("<leader>f", function()
     -- Récupérer la position de la sélection et executer la commande pour formater la sélection
     vim.cmd(":Neoformat")
 end);

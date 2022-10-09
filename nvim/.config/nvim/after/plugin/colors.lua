@@ -1,4 +1,4 @@
-vim.g.maeldonnart_colorscheme = "gruvbox"
+vim.g.mdonnart_colorscheme = "gruvbox"
 
 function ColorMyPencils()
     vim.g.gruvbox_contrast_dark = 'hard'
@@ -7,7 +7,7 @@ function ColorMyPencils()
     vim.g.gruvbox_invert_selection = '0'
     vim.opt.background = "dark"
 
-    vim.cmd("colorscheme " .. vim.g.maeldonnart_colorscheme) 
+    vim.cmd("colorscheme " .. vim.g.mdonnart_colorscheme) 
 
     local hl = function(thing, opts)
         vim.api.nvim_set_hl(0, thing, opts)

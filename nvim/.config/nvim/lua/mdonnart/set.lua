@@ -37,7 +37,4 @@ vim.opt.shortmess:append("c")
 vim.opt.cursorline = true
 vim.opt.colorcolumn = "80"
 
-vim.opt.clipboard = "unnamedplus"
-
 vim.g.mapleader = " "
-

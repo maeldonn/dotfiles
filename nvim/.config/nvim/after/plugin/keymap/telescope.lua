@@ -1,4 +1,4 @@
-local Remap = require("maeldonnart.keymap")
+local Remap = require("mdonnart.keymap")
 local nnoremap = Remap.nnoremap
 
 nnoremap("<leader>ps", function()
