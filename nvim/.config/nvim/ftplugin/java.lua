@@ -10,6 +10,7 @@ local workspace_dir = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local config = {
     cmd = {
         'jdtls',
+        '-javaagent:$HOME/.local/jars/lombok.jar',
         '-configuration ~/.cache/jdtls',
         '-data', vim.fn.expand('~/.cache/jdtls-workspace') .. workspace_dir,
     },
