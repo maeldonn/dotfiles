@@ -49,7 +49,7 @@ return packer.startup(function ()
     -- Harpoon
     use("ThePrimeagen/harpoon")
 
-    -- Neovim
+    -- VCS Integration
     use("TimUntersberger/neogit")
 
     -- Statusbar

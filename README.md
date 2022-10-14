@@ -270,6 +270,7 @@ curl -s "https://get.sdkman.io" | bash
 sdk install java
 sdk install maven
 yay -S jdtls
+sudo chown -R mdonnart /usr/share/java/jdtls
 ```
 
 **GO**
