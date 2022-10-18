@@ -72,7 +72,12 @@ local function config(_config)
 end
 
 require("lspconfig").gopls.setup(config())
+
 require("lspconfig").tsserver.setup(config())
+
+require("lspconfig").rust_analyzer.setup(config({
+    cmd = { "rustup", "run", "stable", "rust-analyzer" },
+}))
 
 require("lspconfig").sumneko_lua.setup(config({
     settings = {

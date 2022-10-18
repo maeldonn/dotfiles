@@ -296,6 +296,15 @@ sudo npm install -g
 sudo pacman -S lua-language-server
 ```
 
+**RUST**
+
+```bash
+sudo pacman -S rustup
+rustup default stable
+rustup component add rust-src
+rustup component add rust-analyzer
+```
+
 ### Setup dotfiles
 
 ```bash

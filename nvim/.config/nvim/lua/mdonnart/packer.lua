@@ -65,6 +65,8 @@ return packer.startup(function ()
     use("simrat39/symbols-outline.nvim")
     use("L3MON4D3/LuaSnip")
     use("saadparwaiz1/cmp_luasnip")
+
+    -- Languages
     use("mfussenegger/nvim-jdtls")
 
     -- Treesitter
