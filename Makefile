@@ -6,6 +6,7 @@ clean:
 	@stow -D bin
 	@stow -D nvim
 	@stow -D personal
+	@stow -D spotify
 	@stow -D sway
 	@stow -D tmux
 	@stow -D waybar
@@ -20,6 +21,7 @@ deploy:
 	@chmod +x ~/.local/scripts/*
 	@stow nvim
 	@stow personal
+	@stow spotify
 	@stow sway
 	@stow tmux
 	@stow waybar
