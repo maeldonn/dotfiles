@@ -26,7 +26,7 @@ local config = {
         '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
     },
     root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew', 'pom.xml'}),
-    capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities),
+    capabilities = require("cmp_nvim_lsp").default_capabilities(),
     init_options = {
         bundles = {}
     },
