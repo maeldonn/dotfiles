@@ -2,9 +2,6 @@ local Remap = require("mdonnart.keymap")
 local inoremap = Remap.inoremap
 local nnoremap = Remap.nnoremap
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
 local workspace_dir = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
 local config = {
