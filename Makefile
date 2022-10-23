@@ -4,6 +4,7 @@ clean:
 	@echo 'Cleaning dotfiles...'
 	@stow -D alacritty
 	@stow -D bin
+	@stow -D lf
 	@stow -D nvim
 	@stow -D personal
 	@stow -D spotify
@@ -19,6 +20,7 @@ deploy:
 	@stow alacritty
 	@stow bin
 	@chmod +x ~/.local/scripts/*
+	@stow lf
 	@stow nvim
 	@stow personal
 	@stow spotify
