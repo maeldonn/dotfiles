@@ -2,6 +2,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 export GOPATH=$HOME/go
 export GIT_EDITOR="nvim"
+export EDITOR="nvim"
 export DOTFILES=$HOME/.dotfiles
 
 export NVM_DIR="/usr/share/nvm"
