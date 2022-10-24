@@ -11,6 +11,8 @@ export NVM_DIR="/usr/share/nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 export PATH=$PATH:$HOME/.local/.npm-global/bin
 export PATH=$PATH:$HOME/.local/scripts
 export PATH=$PATH:$HOME/.local/bin
