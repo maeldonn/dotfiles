@@ -219,7 +219,7 @@ usermod -a -G seat mdonnart
 
 ```bash
 pacman -S git exa neovim zip unzip htop tmux neofetch tree lf spotifyd \
-firefox ffmpeg openssh stow podman fd ripgrep brightnessctl
+firefox ffmpeg openssh stow podman fd ripgrep bat brightnessctl fzf
 ```
 
 ### Setup an AUR wrapper

@@ -20,6 +20,7 @@ alias zshrc="vim ~/.zshrc"
 alias l="exa"
 alias ls="exa -ah"
 alias ll="exa -lah"
+alias cat="bat"
 
 # Ricing
 pfetch
