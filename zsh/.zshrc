@@ -15,11 +15,11 @@ antigen theme romkatv/powerlevel10k
 antigen apply
 
 # Personal aliases
-alias ls="exa"
 alias vim="nvim"
 alias zshrc="vim ~/.zshrc"
+alias l="exa"
+alias ls="exa -ah"
 alias ll="exa -lah"
-alias dev="cd ~/dev"
 
 # Ricing
 pfetch
