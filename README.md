@@ -207,7 +207,7 @@ pacman -Syu
 
 Install graphical environment
 ```bash
-pacman -S wayland sway swaybg swaylock swayidle waybar alacritty wofi
+pacman -S wayland xorg-server-xwayland sway swaybg swaylock swayidle waybar alacritty wofi
 ```
 
 Add user to seat group
@@ -219,7 +219,8 @@ usermod -a -G seat mdonnart
 
 ```bash
 pacman -S git exa neovim zip unzip htop tmux neofetch tree lf spotifyd \
-firefox ffmpeg openssh stow podman fd ripgrep bat brightnessctl fzf
+firefox ffmpeg openssh stow podman fd ripgrep bat brightnessctl fzf \
+obsidian
 ```
 
 ### Setup an AUR wrapper
@@ -249,14 +250,8 @@ mv DejaVuSansMono /home/mdonnart/.fonts/DejaVuSansMono
 ### Setup sound server
 
 ```bash
-pacman -S alsa-utils
-pacman -S pulseaudio
-pacman -S pulseaudio-alsa
-pacman -S pulseaudio-bluetooth
-pacman -S pulseaudio-equalizer
-pacman -S pulseaudio-jack
-pacman -S pulseaudio-lirc
-pacman -S pulseaudio-zeroconf
+pacman -S alsa-utils pulseaudio pulseaudio-alsa pulseaudio-bluetooth \
+pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf
 ```
 
 ### Install development tools
