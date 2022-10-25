@@ -35,7 +35,7 @@ packer.init {
 }
 
 -- Install your plugins here
-return packer.startup(function ()
+return packer.startup(function (use)
     use("wbthomason/packer.nvim")
 
     -- Code formatting
@@ -48,6 +48,9 @@ return packer.startup(function ()
 
     -- Harpoon
     use("ThePrimeagen/harpoon")
+
+    -- Refactoring
+    use("ThePrimeagen/refactoring.nvim")
 
     -- VCS Integration
     use("TimUntersberger/neogit")
