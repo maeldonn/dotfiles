@@ -207,7 +207,7 @@ pacman -Syu
 
 Install graphical environment
 ```bash
-pacman -S wayland xorg-server-xwayland sway swaybg swaylock swayidle waybar alacritty wofi
+pacman -S wayland sway swaybg swaylock swayidle waybar alacritty wofi
 ```
 
 Add user to seat group
@@ -220,7 +220,7 @@ usermod -a -G seat mdonnart
 ```bash
 pacman -S git exa neovim zip unzip htop tmux neofetch tree lf spotifyd \
 firefox ffmpeg openssh stow podman fd ripgrep bat brightnessctl fzf \
-obsidian
+obsidian gnome-boxes
 ```
 
 ### Setup an AUR wrapper
