@@ -219,7 +219,7 @@ usermod -a -G seat mdonnart
 
 ```bash
 pacman -S git exa neovim zip unzip htop tmux neofetch tree lf spotifyd \
-firefox ffmpeg openssh stow podman fd ripgrep bat brightnessctl fzf \
+firefox ffmpeg openssh stow fd ripgrep bat brightnessctl fzf \
 obsidian gnome-boxes
 ```
 
@@ -281,7 +281,7 @@ go install golang.org/x/tools/gopls@latest
 yay -S nvm
 nvm install --lts
 nvm use --lts
-sudo npm i -g typescript typescript-language-server prettier
+sudo npm i -g typescript typescript-language-server vls prettier
 sudo npm install -g 
 ```
 
@@ -298,6 +298,14 @@ sudo pacman -S rustup
 rustup default stable
 rustup component add rust-src
 rustup component add rust-analyzer
+```
+
+**DOCKER**
+
+```bash
+sudo pacman -S docker
+sudo systemctl enable docker.service
+sudo usermod -a -G docker mdonnart
 ```
 
 ### Setup dotfiles
