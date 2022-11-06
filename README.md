@@ -303,7 +303,7 @@ rustup component add rust-analyzer
 **DOCKER**
 
 ```bash
-sudo pacman -S docker
+sudo pacman -S docker docker-compose
 sudo systemctl enable docker.service
 sudo usermod -a -G docker mdonnart
 ```
