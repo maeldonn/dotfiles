@@ -281,8 +281,8 @@ go install golang.org/x/tools/gopls@latest
 yay -S nvm
 nvm install --lts
 nvm use --lts
+sudo corepack enable
 sudo npm i -g typescript typescript-language-server vls prettier
-sudo npm install -g 
 ```
 
 **LUA**

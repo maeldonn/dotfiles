@@ -6,6 +6,7 @@ export DOTFILES=$HOME/.dotfiles
 
 export MOZ_ENABLE_WAYLAND=1
 
+export PATH=$PATH:$HOME/.local/share/pnpm
 export PATH=$PATH:$HOME/.local/.npm-global/bin
 export PATH=$PATH:$HOME/.local/scripts
 export PATH=$PATH:$HOME/.local/bin
