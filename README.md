@@ -220,7 +220,7 @@ usermod -a -G seat mdonnart
 ```bash
 pacman -S git exa neovim zip unzip htop tmux neofetch tree lf spotifyd \
 firefox ffmpeg openssh stow fd ripgrep bat brightnessctl fzf \
-obsidian gnome-boxes
+obsidian gnome-boxes wl-clipboard
 ```
 
 ### Setup an AUR wrapper
@@ -237,14 +237,17 @@ Install tools from AUR
 pacman -S spotify-tui antigen pfetch
 ```
 
-### Install DejaVu Sans Mono NF font
+### Install DejaVu Sans Mono NF font & Jetbrains Mono NF 
 
 ```bash
 cd /home/mdonnart/Downloads
 curl -fLo "DejaVuSansMono.zip" https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/DejaVuSansMono.zip
+curl -fLo "JetbrainsMono.zip" https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetbrainsMono.zip
 unzip DejaVuSansMono.zip -d DejaVuSansMono
+unzip JetbrainsMono.zip -d JetbrainsMono
 mkdir /home/mdonnart/.fonts
 mv DejaVuSansMono /home/mdonnart/.fonts/DejaVuSansMono
+mv JetbrainsMono /home/mdonnart/.fonts/JetbrainsMono
 ```
 
 ### Setup sound server

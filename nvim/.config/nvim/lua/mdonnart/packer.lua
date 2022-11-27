@@ -1,10 +1,8 @@
-local fn = vim.fn
-
 -- Automatically install packer
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+local install_path = vim.fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 ---@diagnostic disable-next-line: missing-parameter
-if fn.empty(fn.glob(install_path)) > 0 then
-    PACKER_BOOTSTRAP = fn.system {
+if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+    PACKER_BOOTSTRAP = vim.fn.system {
         "git",
         "clone",
         "--depth",
@@ -24,7 +22,7 @@ end
 
 -- Have packer use a popup window
 packer.init {
-    snapshot_path = fn.stdpath "config" .. "/snapshots",
+    snapshot_path = vim.fn.stdpath "config" .. "/snapshots",
     max_jobs = 50,
     display = {
         open_fn = function()
@@ -52,11 +50,15 @@ return packer.startup(function (use)
     -- Refactoring
     use("ThePrimeagen/refactoring.nvim")
 
-    -- VCS Integration
+    -- Git Integration
     use("TimUntersberger/neogit")
+    use("lewis6991/gitsigns.nvim")
 
     -- Statusbar
     use({"nvim-lualine/lualine.nvim", requires = { 'kyazdani42/nvim-web-devicons', opt = true }})
+
+    -- Code helpers
+    use("windwp/nvim-autopairs")
 
     -- LSP & Completion
     use("neovim/nvim-lspconfig")
@@ -84,6 +86,7 @@ return packer.startup(function (use)
     -- Colorscheme section 
     use("gruvbox-community/gruvbox")
     use("folke/tokyonight.nvim")
+    use("catppuccin/nvim")
 
     -- Icons
     use("kyazdani42/nvim-web-devicons")

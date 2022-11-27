@@ -11,11 +11,39 @@ local source_mapping = {
 	path = "[Path]",
 }
 
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    update_in_insert = false,
+    underline = true,
+    severity_sort = true,
+    float = {
+        focusable = false,
+        style = "minimal",
+        border = "rounded",
+        source = "always",
+        header = "",
+        prefix = "",
+    },
+})
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+    border = "rounded",
+})
+
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+    border = "rounded",
+})
+
 cmp.setup({
     snippet = {
         expand = function(args)
             require("luasnip").lsp_expand(args.body)
         end,
+    },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
         ['<C-u>'] = cmp.mapping.scroll_docs(-4),
@@ -53,17 +81,6 @@ local function config(_config)
 			nnoremap("gr", function() vim.lsp.buf.rename() end)
 			inoremap("<C-h>", function() vim.lsp.buf.signature_help() end)
 			nnoremap("<leader>ca", function() vim.lsp.buf.code_action() end)
-			nnoremap("<A-CR>", function() vim.lsp.buf.code_action({
-                filter = function(code_action)
-                    if not code_action or not code_action.data then
-                        return false
-                    end
-
-                    local data = code_action.data.id
-                    return string.sub(data, #data - 1, #data) == ":0"
-                end,
-                apply = true
-            }) end)
         end,
     }, _config or {})
 end
@@ -71,6 +88,8 @@ end
 require("lspconfig").gopls.setup(config())
 
 require("lspconfig").tsserver.setup(config())
+
+require("lspconfig").vuels.setup(config())
 
 require("lspconfig").rust_analyzer.setup(config({
     cmd = { "rustup", "run", "stable", "rust-analyzer" },

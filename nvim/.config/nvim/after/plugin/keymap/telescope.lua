@@ -2,7 +2,7 @@ local Remap = require("mdonnart.keymap")
 local nnoremap = Remap.nnoremap
 
 nnoremap("<leader>ps", function()
-    require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})
+    require('telescope.builtin').live_grep()
 end)
 nnoremap("<C-p>", function()
     require('telescope.builtin').git_files()
@@ -12,7 +12,7 @@ nnoremap("<Leader>pf", function()
 end)
 
 nnoremap("<leader>pw", function()
-    require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }
+    require('telescope.builtin').grep_string({ search = vim.fn.expand("<cword>") })
 end)
 nnoremap("<leader>pb", function()
     require('telescope.builtin').buffers()
