@@ -47,9 +47,6 @@ return packer.startup(function (use)
     -- Harpoon
     use("ThePrimeagen/harpoon")
 
-    -- Refactoring
-    use("ThePrimeagen/refactoring.nvim")
-
     -- Git Integration
     use("TimUntersberger/neogit")
     use("lewis6991/gitsigns.nvim")
@@ -70,6 +67,7 @@ return packer.startup(function (use)
     use("simrat39/symbols-outline.nvim")
     use("L3MON4D3/LuaSnip")
     use("saadparwaiz1/cmp_luasnip")
+    use("glepnir/lspsaga.nvim")
 
     -- Languages
     use("mfussenegger/nvim-jdtls")
