@@ -47,6 +47,7 @@ window#waybar {
 }
 
 #battery {
+    padding-right: 7px;
 }
 
 #battery icon {
