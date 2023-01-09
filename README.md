@@ -218,7 +218,7 @@ usermod -a -G seat mdonnart
 ### Install tools
 
 ```bash
-pacman -S git exa neovim zip unzip htop tmux neofetch tree lf spotifyd \
+pacman -S git exa neovim zip unzip htop tmux neofetch lf spotifyd \
 firefox ffmpeg openssh stow fd ripgrep bat brightnessctl fzf \
 obsidian gnome-boxes wl-clipboard blueman
 ```
