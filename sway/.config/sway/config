@@ -32,7 +32,7 @@ set $builtin_trackpad 2362:597:UNIW0001:00_093A:0255_Touchpad
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/finalizer.png fill
+output * bg /home/mdonnart/.dotfiles/wallpapers/skeleton.png fill
 #
 # Example configuration:
 #
