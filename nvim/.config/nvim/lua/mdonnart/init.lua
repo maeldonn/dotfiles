@@ -1,6 +1,6 @@
 require("mdonnart.set")
 require("mdonnart.remap")
-require("mdonnart.packer")
+require("mdonnart.lazy")
 
 local augroup = vim.api.nvim_create_augroup
 
