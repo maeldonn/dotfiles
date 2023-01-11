@@ -1,4 +1,2 @@
-local Remap = require("mdonnart.keymap")
-local nnoremap = Remap.nnoremap
+vim.keymap.set("n", "<leader>so", "<cmd>SymbolsOutline<CR>")
 
-nnoremap("<leader>so", "<cmd>SymbolsOutline<CR>")

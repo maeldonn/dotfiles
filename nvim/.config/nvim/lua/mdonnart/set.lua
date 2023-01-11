@@ -40,3 +40,4 @@ vim.opt.colorcolumn = "80"
 vim.opt.formatoptions = vim.opt.formatoptions - "o" + "r"
 
 vim.g.mapleader = " "
+

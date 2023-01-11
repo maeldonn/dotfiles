@@ -1,7 +1,3 @@
-local Remap = require("mdonnart.keymap")
-local inoremap = Remap.inoremap
-local nnoremap = Remap.nnoremap
-
 local cmp = require("cmp")
 local lspkind = require("lspkind")
 local source_mapping = {
@@ -71,16 +67,16 @@ local function config(_config)
     return vim.tbl_deep_extend("force", {
         capabilities = require("cmp_nvim_lsp").default_capabilities(),
         on_attach = function()
-			nnoremap("K", "<cmd>Lspsaga hover_doc<CR>")
-            nnoremap("gd", function() vim.lsp.buf.definition() end)
-			nnoremap("gt", function() vim.lsp.buf.type_definition() end)
-			nnoremap("gi", function() vim.lsp.buf.implementation() end)
-            nnoremap("gu", "<cmd>Lspsaga lsp_finder<CR>")
-            nnoremap("[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
-            nnoremap("]d", "<cmd>Lspsaga diagnostic_jump_next<CR>")
-            nnoremap("gr", "<cmd>Lspsaga rename<CR>")
-			inoremap("<C-h>", function() vim.lsp.buf.signature_help() end)
-			nnoremap("<leader>ca", "<cmd>Lspsaga code_action<CR>")
+			vim.keymap.set("n" ,"K", "<cmd>Lspsaga hover_doc<CR>")
+            vim.keymap.set("n" ,"gd", function() vim.lsp.buf.definition() end)
+			vim.keymap.set("n" ,"gt", function() vim.lsp.buf.type_definition() end)
+			vim.keymap.set("n" ,"gi", function() vim.lsp.buf.implementation() end)
+            vim.keymap.set("n" ,"gu", "<cmd>Lspsaga lsp_finder<CR>")
+            vim.keymap.set("n" ,"[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+            vim.keymap.set("n" ,"]d", "<cmd>Lspsaga diagnostic_jump_next<CR>")
+            vim.keymap.set("n" ,"gr", "<cmd>Lspsaga rename<CR>")
+			vim.keymap.set("n", "<C-h>", function() vim.lsp.buf.signature_help() end)
+			vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>")
         end,
     }, _config or {})
 end
@@ -142,3 +138,4 @@ require("luasnip.loaders.from_vscode").lazy_load({
 	include = nil, -- Load all languages
 	exclude = {},
 })
+
