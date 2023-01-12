@@ -75,7 +75,7 @@ local function config(_config)
             vim.keymap.set("n" ,"[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
             vim.keymap.set("n" ,"]d", "<cmd>Lspsaga diagnostic_jump_next<CR>")
             vim.keymap.set("n" ,"gr", "<cmd>Lspsaga rename<CR>")
-			vim.keymap.set("n", "<C-h>", function() vim.lsp.buf.signature_help() end)
+			vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end)
 			vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>")
         end,
     }, _config or {})
