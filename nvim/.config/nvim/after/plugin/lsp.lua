@@ -67,7 +67,7 @@ local function config(_config)
     return vim.tbl_deep_extend("force", {
         capabilities = require("cmp_nvim_lsp").default_capabilities(),
         on_attach = function()
-			vim.keymap.set("n" ,"K", "<cmd>Lspsaga hover_doc<CR>")
+			vim.keymap.set("n" ,"K", "<cmd>Lspsaga hover_doc ++quiet<CR>")
             vim.keymap.set("n" ,"gd", function() vim.lsp.buf.definition() end)
 			vim.keymap.set("n" ,"gt", function() vim.lsp.buf.type_definition() end)
 			vim.keymap.set("n" ,"gi", function() vim.lsp.buf.implementation() end)

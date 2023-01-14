@@ -27,7 +27,7 @@ local config = {
 
 require('jdtls').start_or_attach(config)
 
-vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
+vim.keymap.set("n" ,"K", "<cmd>Lspsaga hover_doc ++quiet<CR>")
 vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
 vim.keymap.set("n", "gt", function() vim.lsp.buf.type_definition() end)
 vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end)
