@@ -311,6 +311,13 @@ sudo systemctl enable docker.service
 sudo usermod -a -G docker mdonnart
 ```
 
+**TOOLS**
+
+```bash
+sudo pacman -S lazygit
+sudo pacman -S dbeaver
+```
+
 ### Setup dotfiles
 
 ```bash
