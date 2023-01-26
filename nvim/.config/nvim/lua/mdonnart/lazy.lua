@@ -24,7 +24,7 @@ require("lazy").setup({
     "ThePrimeagen/harpoon",
 
     -- Git Integration
-    "TimUntersberger/neogit",
+    "kdheepak/lazygit.nvim",
     "lewis6991/gitsigns.nvim",
 
     -- Statusbar
