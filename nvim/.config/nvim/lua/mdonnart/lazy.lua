@@ -53,10 +53,12 @@ require("lazy").setup({
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
     "nvim-treesitter/playground",
 
-    -- DAP
-    "mfussenegger/nvim-dap",
-    "rcarriga/nvim-dap-ui",
-    "theHamsta/nvim-dap-virtual-text",
+    -- Debugging
+   "mfussenegger/nvim-dap",
+   "leoluz/nvim-dap-go",
+   "rcarriga/nvim-dap-ui",
+   "theHamsta/nvim-dap-virtual-text",
+   "nvim-telescope/telescope-dap.nvim",
 
     -- Colorscheme section 
     "gruvbox-community/gruvbox",
