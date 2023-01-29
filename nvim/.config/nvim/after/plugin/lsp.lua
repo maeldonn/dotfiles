@@ -36,7 +36,6 @@ require("mason-lspconfig").setup({
         "sumneko_lua",
         "gopls",
         "tsserver",
-        "prettier",
         "rust_analyzer",
         "sumneko_lua",
     }
