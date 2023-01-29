@@ -275,7 +275,6 @@ sudo chown -R mdonnart /usr/share/java/jdtls
 
 ```bash
 sudo pacman -S go
-go install golang.org/x/tools/gopls@latest
 ```
 
 **TYPESCRIPT**
@@ -285,13 +284,7 @@ yay -S nvm
 nvm install --lts
 nvm use --lts
 sudo corepack enable
-sudo npm i -g typescript typescript-language-server vls prettier
-```
-
-**LUA**
-
-```bash
-sudo pacman -S lua-language-server
+sudo npm i -g typescript
 ```
 
 **RUST**

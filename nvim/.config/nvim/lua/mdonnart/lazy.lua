@@ -39,13 +39,15 @@ require("lazy").setup({
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
     "onsails/lspkind-nvim",
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "glepnir/lspsaga.nvim",
-    "ray-x/go.nvim",
 
-    -- Languages
+    -- Languages specific
+    "ray-x/go.nvim",
     "mfussenegger/nvim-jdtls",
 
     -- Symbols outline

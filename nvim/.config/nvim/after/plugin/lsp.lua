@@ -1,5 +1,4 @@
 local cmp = require("cmp")
-local lspkind = require("lspkind")
 local source_mapping = {
 	buffer = "[Buffer]",
 	nvim_lsp = "[LSP]",
@@ -31,6 +30,18 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
     border = "rounded",
 })
 
+require("mason").setup()
+require("mason-lspconfig").setup({
+    ensure_installed = {
+        "sumneko_lua",
+        "gopls",
+        "tsserver",
+        "prettier",
+        "rust_analyzer",
+        "sumneko_lua",
+    }
+})
+
 cmp.setup({
     snippet = {
         expand = function(args)
@@ -50,7 +61,7 @@ cmp.setup({
     }),
     formatting = {
         format = function(entry, vim_item)
-            vim_item.kind = lspkind.presets.default[vim_item.kind]
+            vim_item.kind = require("lspkind").presets.default[vim_item.kind]
             vim_item.menu = source_mapping[entry.source.name]
             return vim_item
         end,
@@ -84,8 +95,6 @@ end
 require("lspconfig").gopls.setup(config())
 
 require("lspconfig").tsserver.setup(config())
-
-require("lspconfig").vuels.setup(config())
 
 require("lspconfig").rust_analyzer.setup(config({
     cmd = { "rustup", "run", "stable", "rust-analyzer" },
