@@ -40,7 +40,6 @@ require("lazy").setup({
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
     "onsails/lspkind-nvim",
-    "simrat39/symbols-outline.nvim",
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "glepnir/lspsaga.nvim",
@@ -48,6 +47,9 @@ require("lazy").setup({
 
     -- Languages
     "mfussenegger/nvim-jdtls",
+
+    -- Symbols outline
+    "simrat39/symbols-outline.nvim",
 
     -- Treesitter
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},

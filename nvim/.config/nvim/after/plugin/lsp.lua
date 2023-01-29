@@ -115,9 +115,6 @@ require("lspconfig").sumneko_lua.setup(config({
     },
 }))
 
--- Project structure
-require("symbols-outline").setup()
-
 -- Snippets
 local snippets_paths = function()
 	local plugins = { "friendly-snippets" }
