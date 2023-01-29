@@ -44,6 +44,7 @@ require("lazy").setup({
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "glepnir/lspsaga.nvim",
+    "ray-x/go.nvim",
 
     -- Languages
     "mfussenegger/nvim-jdtls",
