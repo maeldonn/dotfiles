@@ -234,7 +234,7 @@ makepkg -si
 
 Install tools from AUR
 ```bash
-pacman -S spotify-tui antigen pfetch
+yay -S spotify-tui antigen pfetch
 ```
 
 ### Install DejaVu Sans Mono NF font & Jetbrains Mono NF 
