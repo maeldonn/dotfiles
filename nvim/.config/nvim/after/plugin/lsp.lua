@@ -33,11 +33,10 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = {
-        "sumneko_lua",
+        "lua_ls",
         "gopls",
         "tsserver",
         "rust_analyzer",
-        "sumneko_lua",
     }
 })
 
@@ -99,7 +98,7 @@ require("lspconfig").rust_analyzer.setup(config({
     cmd = { "rustup", "run", "stable", "rust-analyzer" },
 }))
 
-require("lspconfig").sumneko_lua.setup(config({
+require("lspconfig").lua_ls.setup(config({
     settings = {
         Lua = {
 			runtime = {
