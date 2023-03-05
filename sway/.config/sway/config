@@ -103,7 +103,7 @@ exec swayidle -w \
     bindsym $mod+Shift+c reload
 
     # Display actions
-    bindsym $mod+Shift+e exec actions.sh
+    bindsym $mod+Shift+e exec wlogout
 #
 # Moving around:
 #
