@@ -11,6 +11,7 @@ clean:
 	@stow -D sway
 	@stow -D tmux
 	@stow -D waybar
+	@stow -D wlogout
 	@stow -D wofi
 	@stow -D zsh
 	@echo 'Dotfiles cleaned!'
@@ -27,6 +28,7 @@ deploy:
 	@stow sway
 	@stow tmux
 	@stow waybar
+	@stow wlogout
 	@stow wofi
 	@stow zsh
 	@echo 'Dotfiles deployed!'
