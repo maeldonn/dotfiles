@@ -1,5 +1,9 @@
-prompt = Select an application to launch
-gtk_dark = true
-mode = drun
-hide_scroll = true
-term = alacritty
+prompt=Search...
+gtk_dark=true
+mode=drun
+hide_scroll=true
+term=alacritty
+allow_images=true
+image_size=40
+insensitive=true
+no_actions=true
