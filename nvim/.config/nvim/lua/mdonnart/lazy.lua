@@ -15,6 +15,9 @@ require("lazy").setup({
     -- Code formatting
     "sbdchd/neoformat",
 
+    -- File browsing
+    "nvim-telescope/telescope-file-browser.nvim",
+
     -- Telescope
     "nvim-lua/plenary.nvim",
     "nvim-lua/popup.nvim",
