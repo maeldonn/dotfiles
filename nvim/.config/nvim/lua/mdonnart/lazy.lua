@@ -54,9 +54,6 @@ require("lazy").setup({
     {"ray-x/go.nvim", build = ':lua require("go.install").update_all_sync()'},
     "mfussenegger/nvim-jdtls",
 
-    -- Symbols outline
-    "simrat39/symbols-outline.nvim",
-
     -- Treesitter
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
     "nvim-treesitter/playground",
