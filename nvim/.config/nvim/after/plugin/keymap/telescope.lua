@@ -18,6 +18,8 @@ vim.keymap.set("n", "<leader>vh", function()
     require('telescope.builtin').help_tags()
 end)
 
-vim.keymap.set("n", "<leader>pv", function ()
+vim.keymap.set("n", "<leader>rv", function ()
     require("telescope").extensions.file_browser.file_browser()
 end)
+
+vim.keymap.set("n", "<leader>pv", "<cmd>Telescope file_browser path=%:p:h<CR>")
