@@ -55,7 +55,6 @@ require("lazy").setup({
 
     -- Treesitter
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-    "nvim-treesitter/playground",
 
     -- Debugging
    "mfussenegger/nvim-dap",
