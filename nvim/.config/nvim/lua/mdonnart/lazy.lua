@@ -52,7 +52,6 @@ require("lazy").setup({
     -- Languages specific
     "ray-x/go.nvim",
     {"ray-x/go.nvim", build = ':lua require("go.install").update_all_sync()'},
-    "mfussenegger/nvim-jdtls",
 
     -- Treesitter
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
