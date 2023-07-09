@@ -2,16 +2,26 @@ return {
     "neovim/nvim-lspconfig",
 
     dependencies = {
-        "glepnir/lspsaga.nvim",
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/nvim-cmp",
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
-        "onsails/lspkind-nvim",
-        "L3MON4D3/LuaSnip",
-        "saadparwaiz1/cmp_luasnip",
+        -- LSP support
+        { "glepnir/lspsaga.nvim" },
+        { "williamboman/mason.nvim" },
+        { "williamboman/mason-lspconfig.nvim" },
+
+        -- Autocompletion
+        { "hrsh7th/cmp-nvim-lsp" },
+        { "hrsh7th/nvim-cmp" },
+        { "hrsh7th/cmp-buffer" },
+        { "hrsh7th/cmp-path" },
+        { "saadparwaiz1/cmp_luasnip" },
+        { "onsails/lspkind-nvim" },
+
+        -- Snippets
+        {
+            "L3MON4D3/LuaSnip",
+            dependencies = {
+                "rafamadriz/friendly-snippets"
+            }
+        },
     },
 
     config = function ()
@@ -21,6 +31,7 @@ return {
 	        nvim_lsp = "[LSP]",
 	        nvim_lua = "[Lua]",
 	        path = "[Path]",
+	        luasnip = "[Snippet]",
         }
 
         vim.diagnostic.config({
@@ -166,24 +177,6 @@ return {
         }))
 
         -- Snippets
-        local snippets_paths = function()
-        	local plugins = { "friendly-snippets" }
-        	local paths = {}
-        	local path
-        	local root_path = vim.env.HOME .. "/.vim/plugged/"
-        	for _, plug in ipairs(plugins) do
-        		path = root_path .. plug
-        		if vim.fn.isdirectory(path) ~= 0 then
-        			table.insert(paths, path)
-        		end
-        	end
-        	return paths
-        end
-
-        require("luasnip.loaders.from_vscode").lazy_load({
-        	paths = snippets_paths(),
-        	include = nil, -- Load all languages
-        	exclude = {},
-        })
+        require("luasnip.loaders.from_vscode").lazy_load()
     end
 }
