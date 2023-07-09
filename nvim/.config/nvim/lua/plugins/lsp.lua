@@ -2,6 +2,7 @@ return {
     "neovim/nvim-lspconfig",
 
     dependencies = {
+        "glepnir/lspsaga.nvim",
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "hrsh7th/cmp-nvim-lsp",
@@ -88,14 +89,46 @@ return {
             },
         })
 
+        require("lspsaga").setup({
+            ui = {
+                border = "rounded",
+                code_action = " ",
+                colors = {
+                    normal_bg = "#282828",
+                    title_bg = '#282828',
+                    black =  '#282828',
+                    red = '#cc241d',
+                    green = '#98971a',
+                    yellow = '#d79921',
+                    blue = '#458588',
+                    magenta = '#b16286',
+                    cyan = '#689d6a',
+                    white = '#a89984',
+                },
+            },
+            lightbulb = {
+                enable = false,
+            },
+            symbol_in_winbar = {
+                enable = false,
+            },
+        })
+
         local function config(_config)
             return vim.tbl_deep_extend("force", {
                 capabilities = require("cmp_nvim_lsp").default_capabilities(),
                 on_attach = function()
+        			vim.keymap.set("n" ,"K", "<cmd>Lspsaga hover_doc ++quiet<CR>")
                     vim.keymap.set("n" ,"gd", function() vim.lsp.buf.definition() end)
         			vim.keymap.set("n" ,"gt", function() vim.lsp.buf.type_definition() end)
         			vim.keymap.set("n" ,"gi", function() vim.lsp.buf.implementation() end)
+                    vim.keymap.set("n" ,"gu", "<cmd>Lspsaga finder<CR>")
+                    vim.keymap.set("n" ,"[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+                    vim.keymap.set("n" ,"]d", "<cmd>Lspsaga diagnostic_jump_next<CR>")
+                    vim.keymap.set("n" ,"gr", "<cmd>Lspsaga rename<CR>")
         			vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end)
+        			vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>")
+        			vim.keymap.set("n", "<leader>so", "<cmd>Lspsaga outline<CR>")
                 end,
             }, _config or {})
         end
