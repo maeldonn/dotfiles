@@ -6,6 +6,7 @@ clean:
 	@stow -D bin
 	@stow -D lf
 	@stow -D nvim
+	@stow -D neofetch
 	@stow -D personal
 	@stow -D spotify
 	@stow -D sway
@@ -23,6 +24,7 @@ deploy:
 	@chmod +x ~/.local/scripts/*
 	@stow lf
 	@stow nvim
+	@stow neofetch
 	@stow personal
 	@stow spotify
 	@stow sway
