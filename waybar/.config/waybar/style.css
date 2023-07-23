@@ -97,6 +97,11 @@ tooltip {
   margin-right: 60px;
 }
 
+#waybar.empty #window {
+  background: none;
+  border: none;
+}
+
 #clock {
   color: #fab387;
   border-radius: 10px;
