@@ -7,6 +7,7 @@ clean:
 	@stow -D kitty
 	@stow -D lf
 	@stow -D nvim
+	@stow -D mako
 	@stow -D neofetch
 	@stow -D personal
 	@stow -D spotify
@@ -26,6 +27,7 @@ deploy:
 	@stow kitty
 	@stow lf
 	@stow nvim
+	@stow mako
 	@stow neofetch
 	@stow personal
 	@stow spotify
