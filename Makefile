@@ -4,6 +4,7 @@ clean:
 	@echo 'Cleaning dotfiles...'
 	@stow -D alacritty
 	@stow -D bin
+	@stow -D kitty
 	@stow -D lf
 	@stow -D nvim
 	@stow -D neofetch
@@ -22,6 +23,7 @@ deploy:
 	@stow alacritty
 	@stow bin
 	@chmod +x ~/.local/scripts/*
+	@stow kitty
 	@stow lf
 	@stow nvim
 	@stow neofetch
