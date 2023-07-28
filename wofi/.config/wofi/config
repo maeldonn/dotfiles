@@ -7,3 +7,4 @@ allow_images=true
 image_size=40
 insensitive=true
 no_actions=true
+normal_window=true
