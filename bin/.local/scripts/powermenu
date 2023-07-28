@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+op=$( echo -e " Poweroff\n Reboot\n Suspend\n Lock\n Logout" | wofi -i --dmenu -n -W 50 -H 240 | awk '{print tolower($2)}' )
+
+case $op in
+        poweroff)
+                ;&
+        reboot)
+                ;&
+        suspend)
+                systemctl $op
+                ;;
+        lock)
+		swaylock
+                ;;
+        logout)
+                swaymsg exit
+                ;;
+esac

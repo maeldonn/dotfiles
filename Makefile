@@ -4,6 +4,7 @@ clean:
 	@echo 'Cleaning dotfiles...'
 	@stow -D alacritty
 	@stow -D bin
+	@stow -D hyprland
 	@stow -D kitty
 	@stow -D lf
 	@stow -D nvim
@@ -24,6 +25,7 @@ deploy:
 	@stow alacritty
 	@stow bin
 	@chmod +x ~/.local/scripts/*
+	@stow hyprland
 	@stow kitty
 	@stow lf
 	@stow nvim
