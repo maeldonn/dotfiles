@@ -11,9 +11,9 @@ case $op in
                 systemctl $op
                 ;;
         lock)
-		swaylock
+		        swaylock
                 ;;
         logout)
-                swaymsg exit
+                hyprctl dispatch exit
                 ;;
 esac
