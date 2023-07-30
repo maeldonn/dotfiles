@@ -1,96 +1,56 @@
+/* Macchiato Blue */
+@define-color accent #8aadf4;
+@define-color txt #cad3f5;
+@define-color bg #24273a;
+@define-color bg2 #494d64;
+
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 14px;
+}
+
 window {
-  font-family: "JetBrainsMono Nerd Font";
   margin: 0px;
-  border: 10px solid #ebdbb2;
-  background-color: #282828;
-}
-
-#input {
-  margin: 5px;
-  border: none;
-  border-radius: 0;
-  color: #ebdbb2;
-  background-color: #282828;
+  padding: 10px;
+  border: 3px solid @accent;
+  border-radius: 10px;
+  background-color: @bg;
 }
 
 #inner-box {
   margin: 5px;
+  padding: 10px;
   border: none;
-  border-radius: 0;
-  background-color: #282828;
+  background-color: @bg;
 }
 
 #outer-box {
   margin: 5px;
+  padding: 10px;
   border: none;
-  border-radius: 0;
-  background-color: #282828;
-}
-
-#scroll {
-  margin: 0px;
-  border: none;
-  border-radius: 0;
-}
-
-#text {
-  margin: 5px;
-  border: none;
-  border-radius: 0;
-  color: #ebdbb2;
-}
-
-#text:selected {
-  color: #282828;
-}
-
-#entry:selected {
-  background-color: #ebdbb2;
-}
-  margin: 0px;
-  border: 10px solid #ebdbb2;
-  background-color: #282828;
+  background-color: @bg;
 }
 
 #input {
   margin: 5px;
+  padding: 10px;
   border: none;
-  border-radius: 0;
-  color: #ebdbb2;
-  background-color: #282828;
-}
-
-#inner-box {
-  margin: 5px;
-  border: none;
-  border-radius: 0;
-  background-color: #282828;
-}
-
-#outer-box {
-  margin: 5px;
-  border: none;
-  border-radius: 0;
-  background-color: #282828;
-}
-
-#scroll {
-  margin: 0px;
-  border: none;
-  border-radius: 0;
+  color: @accent;
+  background-color: @bg2;
 }
 
 #text {
   margin: 5px;
+  padding: 10px;
   border: none;
-  border-radius: 0;
-  color: #ebdbb2;
-}
-
-#text:selected {
-  color: #282828;
+  color: @txt;
 }
 
 #entry:selected {
-  background-color: #ebdbb2;
+  background-color: @accent;
+  border-radius: 10px;
+}
+
+#entry:selected #text {
+  color: @bg;
 }

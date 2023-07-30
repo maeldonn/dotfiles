@@ -1,6 +1,6 @@
 prompt=Search...
 gtk_dark=true
-mode=drun
+show=drun
 hide_scroll=true
 term=alacritty
 allow_images=true
@@ -8,3 +8,5 @@ image_size=40
 insensitive=true
 no_actions=true
 normal_window=true
+width=500
+height=300

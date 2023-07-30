@@ -6,35 +6,35 @@ scaling=fill
 hide-keyboard-layout
 disable-caps-lock-text
 
-bs-hl-color=f38ba8
+bs-hl-color=ed8796
 font=JetBrainsMono Nerd Font
 
 indicator-radius=250
 indicator-thickness=30
 
 inside-color=00000000
-inside-clear-color=1e1e2e99
-inside-ver-color=45858899
-inside-wrong-color=f38ba899
+inside-clear-color=24273a99
+inside-ver-color=91d7e399
+inside-wrong-color=ed879699
 
 
-key-hl-color=a6adc8
+key-hl-color=8aadf4
 
 layout-bg-color=00000000
 layout-border-color=00000000
-layout-text-color=a6adc8
+layout-text-color=8aadf4
 
 line-uses-inside
 line-uses-ring
 
-ring-color=1e1e2e99
-ring-clear-color=1e1e2e99
-ring-ver-color=45858899
-ring-wrong-color=f38ba899
+ring-color=24273a99
+ring-clear-color=24273a99
+ring-ver-color=91d7e399
+ring-wrong-color=ed879699
 
-separator-color=282828
+separator-color=8aadf4
 
-text-color=a6adc8
-text-clear-color=a6adc8
-text-ver-color=a6adc8
-text-wrong-color=a6adc8
+text-color=cad3f5
+text-clear-color=cad3f5
+text-ver-color=cad3f5
+text-wrong-color=cad3f5
