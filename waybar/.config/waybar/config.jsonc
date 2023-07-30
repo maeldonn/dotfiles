@@ -6,19 +6,25 @@
   "passthrough": false,
   "gtk-layer-shell": true,
   "height": 50,
-  "modules-left": ["clock", "wlr/workspaces"],
+  "modules-left": ["custom/launcher", "clock", "wlr/workspaces"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "network",
     "bluetooth",
     "temperature",
-    "custom/power_profile",
     "battery",
     "backlight",
     "pulseaudio",
     "pulseaudio#microphone",
-    "tray"
+    "tray",
+    "custom/powermenu"
   ],
+
+  "custom/launcher": {
+    "format": "  ",
+    "on-click": "killall wofi || wofi",
+    "tooltip": false
+  },
 
   "hyprland/window": {
     "format": "{}",
@@ -118,5 +124,11 @@
     "tooltip-format-connected": " {device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}",
     "on-click-right": "blueman-manager"
+  },
+
+  "custom/powermenu": {
+    "format": "  ",
+    "on-click": "killall wlogout || wlogout -b 5 -c 20 -r 0",
+    "tooltip": false
   }
 }

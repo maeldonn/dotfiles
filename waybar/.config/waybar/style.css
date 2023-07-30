@@ -47,6 +47,8 @@ tooltip {
   border-radius: 10px;
 }
 
+#custom-launcher,
+#custom-powermenu,
 #window,
 #clock,
 #battery,
@@ -81,6 +83,19 @@ tooltip {
 #tray {
   border-radius: 10px;
   margin-right: 10px;
+}
+
+#custom-launcher {
+  border-radius: 10px;
+  margin: 10px 0 10px 10px;
+  padding: 0 5px 0 0;
+}
+
+#custom-powermenu {
+  color: #ee99a0;
+  border-radius: 10px;
+  margin: 10px 10px 10px 0;
+  padding: 0 5px 0 0;
 }
 
 #workspaces {
