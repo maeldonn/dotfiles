@@ -24,7 +24,7 @@ deploy:
 	@echo 'Deploying dotfiles...'
 	@stow alacritty
 	@stow bin
-	@chmod +x ~/.local/scripts/*
+	@chmod +x ~/.local/bin/*
 	@stow hyprland
 	@stow kitty
 	@stow lf
