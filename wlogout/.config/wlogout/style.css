@@ -13,7 +13,7 @@ button {
 	border: 2px solid @accent;
     border-radius: 20px;
 	background: no-repeat center/25% @bg;
-    margin: 120px 0;
+    min-width: 70px;
 }
 
 button:focus, button:active, button:hover {

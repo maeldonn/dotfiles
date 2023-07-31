@@ -128,7 +128,7 @@
 
   "custom/powermenu": {
     "format": "  ",
-    "on-click": "killall wlogout || wlogout -b 5 -c 20 -r 0",
+    "on-click": "killall wlogout || wlogout -b 5 -c 20 -r 0 -T 350 -B 350",
     "tooltip": false
   }
 }
