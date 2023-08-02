@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-wallpapers="$HOME/.dotfiles/wallpapers/"
-configuration="$HOME/.config/hypr/hyprpaper.conf"
-
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
+    wallpapers="$HOME/.dotfiles/wallpapers/"
     selected="$wallpapers$(ls $wallpapers | fzf)"
 fi
 
@@ -13,7 +11,8 @@ if [[ -z $selected ]]; then
     exit 1
 fi
 
-echo -e "preload = $selected" > $configuration
-echo -e "wallpaper = ,$selected" >> $configuration
+if pgrep swaybg > /dev/null; then
+    pkill swaybg
+fi
 
-killall hyprpaper && (hyprpaper > /dev/null) & disown
+swaybg -m fill -i $selected > /dev/null 2>&1 & disown
