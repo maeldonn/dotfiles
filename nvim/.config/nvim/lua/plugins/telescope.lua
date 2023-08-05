@@ -6,15 +6,15 @@ return {
         "nvim-telescope/telescope-file-browser.nvim",
     },
     keys = {
-        { "<leader>ps", function () require("telescope.builtin").live_grep() end },
-        { "<C-p>", function () require("telescope.builtin").git_files() end },
-        { "<leader>pf", function () require("telescope.builtin").find_files() end },
-        { "<leader>pw", function () require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") }) end },
-        { "<leader>pb", function () require("telescope.builtin").buffers() end },
-        { "<leader>rv", function () require("telescope").extensions.file_browser.file_browser() end },
+        { "<leader>ps", function() require("telescope.builtin").live_grep() end },
+        { "<C-p>",      function() require("telescope.builtin").git_files({ previewer = false }) end },
+        { "<leader>pf", function() require("telescope.builtin").find_files() end },
+        { "<leader>pw", function() require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") }) end },
+        { "<leader>pb", function() require("telescope.builtin").buffers() end },
+        { "<leader>rv", function() require("telescope").extensions.file_browser.file_browser() end },
         { "<leader>pv", "<cmd>Telescope file_browser path=%:p:h<CR>" },
     },
-    config = function ()
+    config = function()
         local telescope = require("telescope")
         telescope.setup({
             extensions = {
