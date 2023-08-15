@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Change wallpaper
+TryExec=wallpaper
+Exec=wallpaper
+Terminal=false

@@ -4,15 +4,11 @@ if [[ $# -eq 1 ]]; then
     selected=$1
 else
     wallpapers="$HOME/.dotfiles/wallpapers/"
-    selected="$wallpapers$(ls $wallpapers | fzf)"
+    selected="$wallpapers$(ls $wallpapers | wofi -d)"
 fi
 
 if [[ -z $selected ]]; then
     exit 1
 fi
 
-if pgrep swaybg > /dev/null; then
-    pkill swaybg
-fi
-
-swaybg -m fill -i $selected > /dev/null 2>&1 & disown
+swww img $selected --transition-type wipe

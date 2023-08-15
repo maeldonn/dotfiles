@@ -3,6 +3,7 @@ all: clean deploy
 clean:
 	@echo 'Cleaning dotfiles...'
 	@stow -D alacritty
+	@stow -D applications
 	@stow -D bin
 	@stow -D hyprland
 	@stow -D kitty
@@ -23,6 +24,7 @@ clean:
 deploy:
 	@echo 'Deploying dotfiles...'
 	@stow alacritty
+	@stow applications
 	@stow bin
 	@chmod +x ~/.local/bin/*
 	@stow hyprland
