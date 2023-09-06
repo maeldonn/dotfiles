@@ -11,4 +11,9 @@ if [[ -z $selected ]]; then
     exit 1
 fi
 
+swww query &> /dev/null
+if [[ $? -eq 1 ]]; then
+    swww init
+fi
+
 swww img $selected --transition-type wipe
