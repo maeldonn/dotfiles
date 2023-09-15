@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+setWaylandFlag() {
+    location="/usr/share/applications/$1"
+    if [[ $(grep '^Exec=' $location | grep -c 'wayland') -gt 0 ]]; then
+        return
+    fi
+
+    sudo sed -i '/^Exec=/ s/$/ --enable-features=UseOzonePlatform --ozone-platform=wayland/' $location
+}
+
+setWaylandFlag "spotify.desktop"
+setWaylandFlag "obsidian.desktop"
+setWaylandFlag "insomnia.desktop"
