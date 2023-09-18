@@ -1,8 +1,17 @@
 return {
     "mfussenegger/nvim-dap",
     dependencies = {
-        "rcarriga/nvim-dap-ui",
-        "theHamsta/nvim-dap-virtual-text",
+        { "rcarriga/nvim-dap-ui" },
+        { "theHamsta/nvim-dap-virtual-text" },
+        {
+            "leoluz/nvim-dap-go",
+            config = function()
+                require("dap-go").setup()
+            end,
+            keys = {
+                { "<leader>dt", function() require("dap-go").debug_test() end, desc = "Debug go test" }
+            },
+        },
     },
     keys = {
         { "<Up>",           function() require("dap").continue() end },
