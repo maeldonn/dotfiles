@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+if [[ $# -lt 2 ]]; then
+    echo "tunnel"
+    echo ""
+    echo "  Usage:"
+    echo "      tunnel [hostname] [port1] [port2] ..."
+    exit 0
+fi
+
+command="ssh -Ng"
+
+for port in ${@:2}; do
+    echo "Forwarding port $port of $1..."
+    command+=" -L $port:localhost:$port"
+done
+
+evaluated_content=$(eval "$command $1 2>&1")
+
+if [ $? -ne 0 ] && [ -n "$evaluated_content" ]; then
+    echo ""
+    echo ""
+    echo "An error occured :"
+    echo ""
+    echo "$evaluated_content"
+fi
