@@ -9,7 +9,7 @@ window {
 button {
     color: @txt;
     box-shadow: none;
-    font: 16px "JetBrainsMono Nerd Font";
+    font: 16px "JetBrains Mono NF";
 	border: 2px solid @accent;
     border-radius: 20px;
 	background: no-repeat center/25% @bg;
