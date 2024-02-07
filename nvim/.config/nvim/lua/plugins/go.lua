@@ -1,6 +1,9 @@
 return {
     {
         "ray-x/go.nvim",
+        keys = {
+            { "<leader>ee", "<cmd>GoIfErr<CR>" },
+        },
         config = function()
             require("go").setup()
         end,
