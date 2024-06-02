@@ -5,6 +5,7 @@ clean:
 	@stow -D alacritty
 	@stow -D applications
 	@stow -D bin
+	@stow -D code
 	@stow -D hyprland
 	@stow -D kitty
 	@stow -D lf
@@ -27,6 +28,7 @@ deploy:
 	@stow applications
 	@stow bin
 	@chmod +x ~/.local/bin/*
+	@stow code
 	@stow hyprland
 	@stow kitty
 	@stow lf
