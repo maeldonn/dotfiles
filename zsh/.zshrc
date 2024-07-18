@@ -14,6 +14,9 @@ antigen theme romkatv/powerlevel10k
 # Tell Antigen that you're done.
 antigen apply
 
+# Set up fzf key bindings and fuzzy fuzzy completion
+source <(fzf --zsh)
+
 # Personal aliases
 alias vim="nvim"
 alias zshrc="vim ~/.zshrc"
