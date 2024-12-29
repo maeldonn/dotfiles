@@ -1,0 +1,24 @@
+font-family = JetBrains Mono NF
+font-size = 12
+theme = catppuccin-macchiato
+shell-integration-features = no-cursor
+cursor-style = block
+gtk-titlebar = false
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+# Keybindings for panes/splits
+keybind = ctrl+shift+a>s=new_split:right
+keybind = ctrl+shift+a>v=new_split:down
+keybind = ctrl+shift+a>x=close_surface
+
+# Navigation between splits
+keybind = ctrl+shift+a>h=goto_split:left
+keybind = ctrl+shift+a>j=goto_split:bottom
+keybind = ctrl+shift+a>k=goto_split:top
+keybind = ctrl+shift+a>l=goto_split:right
+
+# Tab management
+keybind = ctrl+shift+a>p=previous_tab
+keybind = ctrl+shift+a>n=next_tab
+keybind = ctrl+shift+a>c=new_tab

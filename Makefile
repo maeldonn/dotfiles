@@ -1,11 +1,11 @@
 all: clean deploy
-
 clean:
 	@echo 'Cleaning dotfiles...'
 	@stow -D alacritty
 	@stow -D applications
 	@stow -D bin
 	@stow -D code
+	@stow -D ghostty
 	@stow -D hyprland
 	@stow -D kitty
 	@stow -D lf
@@ -25,11 +25,12 @@ clean:
 deploy:
 	@echo 'Deploying dotfiles...'
 	@stow alacritty
-	@stow applications
+	# @stow applications
 	@stow bin
 	@chmod +x ~/.local/bin/*
 	@stow code
 	@stow hyprland
+	@stow ghostty
 	@stow kitty
 	@stow lf
 	@stow nvim
