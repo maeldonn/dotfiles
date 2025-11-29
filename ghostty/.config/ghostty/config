@@ -1,6 +1,6 @@
 font-family = JetBrains Mono NF
 font-size = 12
-theme = catppuccin-macchiato
+theme = Catppuccin Macchiato
 shell-integration-features = no-cursor
 cursor-style = block
 gtk-titlebar = false
