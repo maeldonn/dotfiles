@@ -20,9 +20,9 @@ source <(fzf --zsh)
 # Personal aliases
 alias vim="nvim"
 alias zshrc="vim ~/.zshrc"
-alias l="exa"
-alias ls="exa -ah"
-alias ll="exa -lah"
+alias l="eza"
+alias ls="eza -ah"
+alias ll="eza -lah"
 alias cat="bat"
 
 # Ricing
