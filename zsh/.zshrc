@@ -1,18 +1,17 @@
-source $HOME/.antigen/antigen.zsh
+# source $HOME/.antigen/antigen.zsh
+source '/usr/share/zsh-antidote/antidote.zsh'
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+# Initialize antidote's dynamic mode, which changes `antidote bundle`
+# from static mode
+source <(antidote init)
 
 # Bundles from github
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions
+antidote bundle zsh-users/zsh-autosuggestions
+antidote bundle zsh-users/zsh-syntax-highlighting
+antidote bundle zsh-users/zsh-completions
 
 # Load the theme.
-antigen theme romkatv/powerlevel10k
-
-# Tell Antigen that you're done.
-antigen apply
+antidote bundle romkatv/powerlevel10k
 
 # Set up fzf key bindings and fuzzy fuzzy completion
 source <(fzf --zsh)
@@ -24,6 +23,3 @@ alias l="eza"
 alias ls="eza -ah"
 alias ll="eza -lah"
 alias cat="bat"
-
-# Ricing
-pfetch
