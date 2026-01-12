@@ -82,7 +82,8 @@ return {
       { 'williamboman/mason-lspconfig.nvim' },
     },
     config = function()
-      local lsp_defaults = require('lspconfig').util.default_config
+      local lspconfig = require 'lspconfig'
+      local lsp_defaults = lspconfig.util.default_config
 
       lsp_defaults.capabilities = vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
 
@@ -123,30 +124,11 @@ return {
           'lua_ls',
           'gopls',
           'ts_ls',
-          'volar',
         },
         handlers = {
           function(server_name)
-            require('lspconfig')[server_name].setup {}
+            lspconfig[server_name].setup {}
           end,
-          ts_ls = {
-            init_options = {
-              plugins = {
-                {
-                  name = '@vue/typescript-plugin',
-                  location = require('mason-registry').get_package('vue-language-server'):get_install_path()
-                    .. '/node_modules/@vue/language-server'
-                    .. '/node_modules/@vue/typescript-plugin',
-                  languages = { 'javascript', 'typescript', 'vue' },
-                },
-              },
-              filetypes = {
-                'javascript',
-                'typescript',
-                'vue',
-              },
-            },
-          },
         },
       }
     end,
