@@ -5,10 +5,19 @@ source '/usr/share/zsh-antidote/antidote.zsh'
 # from static mode
 source <(antidote init)
 
+# Load the OMZ bridge
+antidote bundle getantidote/use-omz
+
+# Load the OMZ library
+antidote bundle ohmyzsh/ohmyzsh path:lib
+
 # Bundles from github
 antidote bundle zsh-users/zsh-autosuggestions
 antidote bundle zsh-users/zsh-syntax-highlighting
 antidote bundle zsh-users/zsh-completions
+
+# Enable OMZ plugins
+antidote bundle ohmyzsh/ohmyzsh path:plugins/mise
 
 # Load the theme.
 antidote bundle romkatv/powerlevel10k
