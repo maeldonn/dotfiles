@@ -1,0 +1,14 @@
+[".config/nvim"]
+    type = "git-repo"
+    url = "git@github.com:maeldonn/nvim.git"
+    refreshPeriod = "0"
+
+[".config/tmux/plugins/tpm"]
+    type = "git-repo"
+    url = "https://github.com/tmux-plugins/tpm.git"
+    refreshPeriod = "168h"
+
+["."]
+    type = "git-repo"
+    url = "git@github.com:maeldonn/dotfiles-personal.git"
+    refreshPeriod = "0"
