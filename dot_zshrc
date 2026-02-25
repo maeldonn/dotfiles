@@ -1,5 +1,4 @@
-# source $HOME/.antigen/antigen.zsh
-source '/usr/share/zsh-antidote/antidote.zsh'
+source $HOME/.antidote/antidote.zsh
 
 # Initialize antidote's dynamic mode, which changes `antidote bundle`
 # from static mode
