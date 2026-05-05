@@ -8,11 +8,6 @@ gtk-titlebar = false
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
 
-{{ if eq .chezmoi.os "darwin" -}}
-# MacOS-specific keybindings
-keybind = options+backspace=text:\x1b\x7f
-{{- end }}
-
 # Keybindings for panes/splits
 keybind = ctrl+shift+a>s=new_split:right
 keybind = ctrl+shift+a>v=new_split:down
@@ -28,3 +23,8 @@ keybind = ctrl+shift+a>l=goto_split:right
 keybind = ctrl+shift+a>p=previous_tab
 keybind = ctrl+shift+a>n=next_tab
 keybind = ctrl+shift+a>c=new_tab
+
+{{ if eq .chezmoi.os "darwin" -}}
+# MacOS-specific keybindings
+keybind = options+backspace=text:\x1b\x7f
+{{- end }}

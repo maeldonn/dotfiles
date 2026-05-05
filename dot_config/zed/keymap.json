@@ -1,0 +1,90 @@
+[
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "ctrl-h": "editor::ShowSignatureHelp",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == visual && !menu",
+    "bindings": {
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp",
+      "<": "editor::Outdent",
+      ">": "editor::Indent",
+      "space p": ["workspace::SendKeystrokes", "\" _ d P"],
+      "space f": "editor::FormatSelections",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space y": "editor::Copy",
+      "space d": ["workspace::SendKeystrokes", "\" _ d"],
+      "space f": "editor::Format",
+      "space c a": "editor::ToggleCodeActions",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "shift-y": ["workspace::SendKeystrokes", "y $"],
+      "n": ["workspace::SendKeystrokes", "n z z v"],
+      "shift-n": ["workspace::SendKeystrokes", "shift-n z z v"],
+      "shift-j": ["workspace::SendKeystrokes", "m z shift-j ` z"],
+      "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+      "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
+      "shift-q": null,
+      "space shift-y": ["workspace::SendKeystrokes", "\" + shift-y"],
+      "space s w": [
+        "action::Sequence",
+        [["workspace::SendKeystrokes", "v i w"], "workspace::NewSearch"],
+      ],
+      "space s o": "outline_panel::Toggle",
+      "space a": "editor::ToggleBookmark",
+
+      "shift-k": "editor::Hover",
+      "g r": "editor::Rename",
+      "[ d": "editor::GoToPreviousDiagnostic",
+      "] d": "editor::GoToDiagnostic",
+      "g d": "editor::GoToDefinition",
+      "g shift-d": "editor::GoToDeclaration",
+      "g t": "editor::GoToTypeDefinition",
+      "g i": "editor::GoToImplementation",
+      "g u": "editor::FindAllReferences",
+
+      "up": "debugger::Continue",
+      "down": "debugger::StepOver",
+      "right": "debugger::StepInto",
+      "left": "debugger::StepOut",
+      "space b": "editor::ToggleBreakpoint",
+      "space r c": "debugger::RunToCursor",
+      "space d r": "debugger::FocusConsole",
+      "space left": "debug_panel::ToggleFocus",
+      "space down": "debug_panel::Toggle",
+    },
+  },
+  {
+    "context": "((Editor && vim_mode == normal) || (!Editor && !Terminal)) && !menu",
+    "bindings": {
+      "space space": "tab_switcher::ToggleAll",
+      "space s f": "file_finder::Toggle",
+      "space s g": ["pane::DeploySearch", { "replace_enabled": false }],
+      "space s w": ["pane::DeploySearch", { "replace_enabled": false }],
+      "space s d": "editor::ToggleDiagnostics",
+      "space g s": "git_panel::Toggle",
+      "\\": "project_panel::Toggle",
+      "ctrl-e": "editor::ViewBookmarks",
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "o": "project_panel::Open",
+      "a": "project_panel::NewFile",
+      "shift-a": "project_panel::NewDirectory",
+      "d": "project_panel::Trash",
+      "\\": "project_panel::Toggle",
+    },
+  },
+]

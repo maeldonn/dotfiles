@@ -1,0 +1,11 @@
+[
+  {
+    "label": "Open project",
+    "command": "cd ~/dev && project=$(find . -mindepth 1 -maxdepth 1 -type d | sed 's#^./##' | sort | fzf) && [ -n \"$project\" ] && zed -e \"$HOME/dev/$project\"",
+    "use_new_terminal": false
+  },
+  {
+    "label": "Claude code",
+    "command": "claude"
+  }
+]
