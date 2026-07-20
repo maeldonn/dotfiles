@@ -1,5 +1,11 @@
 [user]
-    name = "Maël DONNART"
+    name = "{{ .name }}"
+    email = "{{ .email }}"
+{{- if ne .gpg_key "" }}
+    signingKey = "{{ .gpg_key }}"
+{{- else }}
+    signingKey = "~/.ssh/id_ed25519.pub"
+{{- end }}
 [core]
     editor = nvim
 [init]
@@ -12,3 +18,17 @@
     prune = true
 [url "git@github.com:"]
     insteadOf = "https://github.com/"
+[gpg]
+{{- if ne .gpg_key "" }}
+    format = openpgp
+{{- else }}
+    format = ssh
+{{- end }}
+[commit]
+    gpgSign = true
+[tag]
+    gpgSign = true
+{{- if eq .gpg_key "" }}
+[gpg "ssh"]
+    allowedSignersFile = "~/.config/git/allowed_signers"
+{{- end }}
