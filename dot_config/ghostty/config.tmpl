@@ -1,5 +1,6 @@
-font-family = JetBrains Mono NF
+font-family = JetBrainsMono Nerd Font Mono
 font-size = 12
+font-thicken = 1
 theme = Catppuccin Macchiato
 shell-integration-features = no-cursor
 shell-integration-features = ssh-env
@@ -26,5 +27,6 @@ keybind = ctrl+shift+a>c=new_tab
 
 {{ if eq .chezmoi.os "darwin" -}}
 # MacOS-specific keybindings
-keybind = options+backspace=text:\x1b\x7f
+keybind = option+backspace=text:\x1b\x7f
+macos-icon = blueprint
 {{- end }}
