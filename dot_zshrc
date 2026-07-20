@@ -31,3 +31,8 @@ alias l="eza"
 alias ls="eza -ah"
 alias ll="eza -lah"
 alias cat="bat"
+
+# Completion
+autoload -U compinit && compinit
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
