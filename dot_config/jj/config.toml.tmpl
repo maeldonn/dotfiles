@@ -1,0 +1,31 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "{{ .name }}"
+email = "{{ .email }}"
+
+[ui]
+editor = "nvim"
+default-command = "log"
+
+[revsets]
+bookmark-advance-to = 'closest_pushable(@)'
+
+[revset-aliases]
+# Closest revision that is mutable, described and either non-empty or a merge
+'closest_pushable(to)' = '''
+  heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))
+'''
+
+[signing]
+behavior = "drop"
+{{- if ne .gpg_key "" }}
+backend = "gpg"
+key = "{{ .gpg_key }}"
+{{- else }}
+backend = "ssh"
+key = "~/.ssh/id_ed25519.pub"
+{{- end }}
+
+[git]
+sign-on-push = true
