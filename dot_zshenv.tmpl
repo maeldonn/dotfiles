@@ -5,6 +5,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export DOTFILES=$HOME/.dotfiles
 
+export GPG_TTY=$(tty)
 export LESS="-F -X -R"
 
 {{ if eq .chezmoi.os "darwin" -}}
