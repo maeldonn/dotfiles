@@ -8,10 +8,6 @@ export DOTFILES=$HOME/.dotfiles
 export GPG_TTY=$(tty)
 export LESS="-F -X -R"
 
-{{ if eq .chezmoi.os "darwin" -}}
-export DOCKER_HOST=unix:///Users/$(whoami)/.colima/local/docker.sock
-{{- end }}
-
 export PATH=$PATH:$HOME/.local/scripts
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/go/bin
