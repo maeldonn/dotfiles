@@ -24,6 +24,9 @@ antidote bundle romkatv/powerlevel10k
 # Set up fzf key bindings and fuzzy fuzzy completion
 source <(fzf --zsh)
 
+# zsh functions
+source ~/.config/zsh/functions.zsh
+
 # Personal aliases
 alias vim="nvim"
 alias zshrc="vim ~/.zshrc"
