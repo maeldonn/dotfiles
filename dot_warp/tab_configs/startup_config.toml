@@ -1,0 +1,6 @@
+name = "dev"
+
+[[panes]]
+id = "main"
+type = "terminal"
+directory = "/Users/mdonnart/dev"
